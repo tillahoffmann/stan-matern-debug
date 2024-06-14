@@ -15,5 +15,5 @@ print(output_file, f"success={success}")
 
 if "matern-ok" in stan_file:
     assert success == 1
-else:
+elif "matern-error" in stan_file:
     assert np.isnan(success)

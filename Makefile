@@ -10,6 +10,7 @@ all : ${OUTPUT_FILES}
 
 ${OUTPUT_FILES} : %-${UNAME}.txt : %.stan transformed_data.stan run.py
 	python run.py $< $@
+	cat $@
 
 image :
 	docker build --build-arg CMDSTAN_VERSION=${CMDSTAN_VERSION} -t stan-matern-debug .

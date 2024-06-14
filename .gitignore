@@ -166,3 +166,4 @@ cython_debug/
 matern*
 !*.stan
 *~
+playground/
